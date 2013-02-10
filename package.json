@@ -1,0 +1,44 @@
+{
+  "name": "rle-rasterize",
+  "version": "0.0.0",
+  "description": "Rasterizes meshes into narrowband level sets",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "normals": "~0.0.0",
+    "rle-core": "~0.0.5",
+    "rle-mesh": "~0.0.4",
+    "rle-repair": "~0.0.2",
+    "signed-distance": "~0.0.0",
+    "spatial-grid": "~0.0.5"
+  },
+  "devDependencies": {
+    "bunny": "~0.0.0",
+    "gl-shells": "~0.0.10",
+    "jquery-browserify": "~1.8.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/rle-rasterize.git"
+  },
+  "keywords": [
+    "rasterize",
+    "rle",
+    "voxel",
+    "mesh",
+    "narrowband",
+    "level",
+    "set",
+    "3d",
+    "geometry"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "3a32fae9e2bdbc9a07908337ddf8e349e15c4cc8"
+}

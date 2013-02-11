@@ -12,11 +12,11 @@ Once that's done, you can use it to turn any mesh into a narrowband level set.  
 
     var bunny_rle = require("rle-rasterize")(require("bunny"));
 
-`require("rle-rasterize")(mesh)`
+`require("rle-rasterize")(cells, positions[, faceNormals])`
 --------------------------------
 Rasterizes a mesh into a voxel grid.  The mesh is rasterized at the resolution of one voxel/unit.  If you want to use a different resolution, you need to transform the mesh first.  Mesh must have at least the following properties:
 
-* `cells`: (Or optionally `faces`) - an array of convex polygons represented by their clockwise oriented indices.
+* `cells`: an array of convex polygons represented by their clockwise oriented indices.
 * `positions`: An array of length 3 arrays representing the positions of the mesh vertices.
 * `faceNormals`: (Optional) An array of the per-face normals.  If you don't specify this, it will be computed when the function gets called.
 

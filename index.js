@@ -13,9 +13,9 @@ var voxelCompare = new Function("a", "b", [
 ].join("\n"));
 
 
-function rasterize(mesh) {
-  var grid = spatialGrid(mesh, 1.0);
-  var faceNormals = mesh.faceNormals || normals.faceNormals(grid.positions, grid.cells);
+function rasterize(cells, positions, faceNormals) {
+  var grid = spatialGrid(cells, positions, 1.0);
+  var faceNormals = faceNormals || normals.faceNormals(grid.cells, grid.positions);
   var result = [];
   for(var id in grid.grid) {
     var coord = grid.grid[id].coord;

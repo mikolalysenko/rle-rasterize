@@ -13,7 +13,7 @@ var voxelCompare = new Function("a", "b", [
 ].join("\n"));
 
 
-module.exports = function(mesh) {
+function rasterize(mesh) {
   var grid = spatialGrid(mesh, 1.0);
   var faceNormals = mesh.faceNormals || normals.faceNormals(grid.positions, grid.cells);
   var result = [];
@@ -47,3 +47,5 @@ module.exports = function(mesh) {
   }
   return repair.removeDuplicates(new core.DynamicVolume([X,Y,Z], D, P));
 }
+
+module.exports = rasterize;

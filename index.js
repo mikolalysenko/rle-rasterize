@@ -1,3 +1,5 @@
+"use strict";
+
 var spatialGrid = require("spatial-grid");
 var normals = require("normals");
 var signedDistance = require("signed-distance");
@@ -12,8 +14,12 @@ var voxelCompare = new Function("a", "b", [
   "return 0;"
 ].join("\n"));
 
-
 function rasterize(cells, positions, faceNormals) {
+  if(cells.cells) {
+    faceNormals = cells.faceNormals;
+    positions = cells.positions;
+    cells = cells.cells
+  }
   var grid = spatialGrid(cells, positions, 1.0);
   var faceNormals = faceNormals || normals.faceNormals(grid.cells, grid.positions);
   var result = [];
@@ -45,7 +51,8 @@ function rasterize(cells, positions, faceNormals) {
     P[i+1] = r[3];
     D[i+1] = r[4];
   }
-  return repair.removeDuplicates(new core.DynamicVolume([X,Y,Z], D, P));
+  //return repair.removeDuplicates(new core.DynamicVolume([X,Y,Z], D, P));
+  return new core.DynamicVolume([X,Y,Z], D, P);
 }
 
 module.exports = rasterize;

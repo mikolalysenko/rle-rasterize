@@ -10,7 +10,8 @@ First, install the package using npm:
     
 Once that's done, you can use it to turn any mesh into a narrowband level set.  For example, here is how you can make a narrowband level set representation of the Stanford bunny:
 
-    var bunny_rle = require("rle-rasterize")(require("bunny"));
+    var bunny = require("bunny");
+    var bunny_rle = require("rle-rasterize")(bunny.cells, bunny.positions);
 
 `require("rle-rasterize")(cells, positions[, faceNormals])`
 --------------------------------

@@ -52,7 +52,7 @@ function rasterize(cells, positions, faceNormals) {
     D[i+1] = r[4];
   }
   //return repair.removeDuplicates(new core.DynamicVolume([X,Y,Z], D, P));
-  return new core.DynamicVolume([X,Y,Z], D, P);
+  return repair.removeDuplicates(new core.DynamicVolume([X,Y,Z], D, P));
 }
 
 module.exports = rasterize;

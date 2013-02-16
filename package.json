@@ -1,6 +1,6 @@
 {
   "name": "rle-rasterize",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Rasterizes meshes into narrowband level sets",
   "main": "index.js",
   "directories": {

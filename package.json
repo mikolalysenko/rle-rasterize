@@ -1,18 +1,17 @@
 {
   "name": "rle-rasterize",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Rasterizes meshes into narrowband level sets",
   "main": "index.js",
   "directories": {
     "example": "example"
   },
   "dependencies": {
-    "normals": "~0.1",
-    "rle-core": "~0.0",
-    "rle-mesh": "~0.0",
-    "rle-repair": "~0.0",
-    "signed-distance": "~0.0",
-    "spatial-grid": "~0.1"
+    "normals": "~0.1.0",
+    "rle-core": "~0.0.7",
+    "rle-repair": "~0.0.4",
+    "signed-distance": "~0.0.3",
+    "spatial-grid": "~0.1.1"
   },
   "devDependencies": {
     "bunny": "~1",
